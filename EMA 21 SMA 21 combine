@@ -1,0 +1,6 @@
+//plotting 21 period ema and sma on the same graph 
+indicator("First script")
+sma=ta.sma(close,21)
+ema=ta.ema(close,21)
+plot(sma)
+plot(ema)

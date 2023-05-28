@@ -1,6 +1,0 @@
-indicator("My script")
-sma=ta.sma(close,21)
-ema=ta.ema(close,21)
-plot(sma)
-plot(ema)
-

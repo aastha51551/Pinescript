@@ -1,0 +1,16 @@
+/*The moving average convergence/divergence (MACD, or MAC-D) line is calculated by 
+subtracting the 26-period exponential moving average (EMA) from the 12-period EMA. 
+The signal line is a nine-period EMA of the MACD line.
+MACD triggers technical signals when the MACD line crosses above the signal line (to buy) 
+or falls below it (to sell)*/
+
+indicator("MACD")
+a=ta.ema(close,14)
+b=ta.ema(close,21)
+c=ta.ema(close,41)
+d=ta.ema(close,90)
+e=ta.ema(close,90)
+f=ta.ema(close,200)
+plot(a-b)
+plot(c-d)
+plot(e-f)

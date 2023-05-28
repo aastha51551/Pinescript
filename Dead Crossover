@@ -1,0 +1,11 @@
+//It happens when a 200 day sma crosses above a 50 day sma.
+//It’s a sign that the market has deteriorated in a period little longer than 2 months.
+strategy("Dead CrossOver", overlay=true, margin_long=100, margin_short=100)
+
+longCondition = ta.crossover(ta.sma(close, 200), ta.sma(close, 50))
+if (longCondition)
+    strategy.entry("Sell", strategy.short)
+
+shortCondition = ta.crossunder(ta.sma(close, 200), ta.sma(close, 50))
+if (shortCondition)
+    strategy.entry("Buy", strategy.long)
