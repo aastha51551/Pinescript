@@ -1,0 +1,14 @@
+/*When the opening and closing value of the current candle falls within the range of opening 
+and closing values of the previous candle, it’s called as an inside candle.*/
+//In the end, there is an alert which will tell us when an inside candle is detected
+
+indicator("Inside Candle")
+current_open=open[1]
+current_close=close[1]
+prev_open=open[0]
+prev_close=close[0]
+bool cond1=current_open>prev_open and current_open<prev_close and current_close>prev_open and current_close<prev_close
+bool cond2=current_open<prev_open and current_open>prev_close and current_close<prev_open and current_close>prev_close
+insideCandle= cond1 or cond2
+if (insideCandle)
+    alert("Inside Candle Detected")
