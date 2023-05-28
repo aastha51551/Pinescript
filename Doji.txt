@@ -1,0 +1,11 @@
+//Doji is a candlestick pattern in which the opening and the closing price for a security is the same.
+//It usually signals a trend reversal.
+
+indicator("Doji Candle", overlay=true)
+
+dojiBody = math.abs(open - close) <= (high - low) * 0.1
+dojiShadow = (math.abs(open - low) >= (high - low) * 0.7) and (math.abs(close - high) >= (high - low) * 0.7)
+
+isDoji = dojiBody and dojiShadow
+
+plotshape(isDoji, color=color.yellow, style=shape.labelup, location=location.belowbar, size=size.small, text="Doji")
