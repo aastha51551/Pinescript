@@ -1,0 +1,16 @@
+//@version=5
+strategy("5 EMA Strategy", overlay=true)
+
+ema = ta.ema(close, 5)
+
+Buy = ta.crossover(close, ema)
+Sell = ta.crossunder(close, ema)
+
+if (Buy)
+    strategy.entry("Buy", strategy.long)
+
+if (Sell)
+    strategy.close("Buy")
+
+// Plot 5 EMA
+plot(ema, color=color.blue, title="5 EMA")
