@@ -1,0 +1,24 @@
+/@version=5
+strategy("Trend-Following Strategy with Volatility Filter", overlay=true)
+
+// Define strategy inputs
+emaPeriod = input(20, "EMA Period")
+atrPeriod = input(14, "ATR Period")
+atrMultiplier = input(2.0, "ATR Multiplier")
+
+// Calculate indicators
+ema = ta.ema(close, emaPeriod)
+atr = ta.atr(atrPeriod)
+
+// Define strategy conditions
+enterLong = ta.crossover(close, ema) and close > ema + (atr * atrMultiplier)
+exitLong = ta.crossunder(close, ema)
+
+// Execute strategy
+if (enterLong)
+    strategy.entry("Long", strategy.long)
+if (exitLong)
+    strategy.close("Long")
+
+// Plot indicators
+plot(ema, color=color.blue, title="EMA")
