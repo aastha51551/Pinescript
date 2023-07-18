@@ -1,0 +1,24 @@
+//@version=5
+strategy(" Momentum Strategy", overlay=true)
+
+
+fastLength = input(10, "Fast MA Length")
+slowLength = input(20, "Slow MA Length")
+momLength = input(14, "Momentum Length")
+
+
+fastMA = ta.sma(close, fastLength)
+slowMA = ta.sma(close, slowLength)
+mom = ta.mom(close, momLength)
+
+
+shouldBuy = ta.crossover(fastMA, slowMA) and mom > 0
+shouldSell = ta.crossunder(fastMA, slowMA) and mom < 0
+
+
+if (shouldBuy)
+    strategy.entry("Buy", strategy.long)
+
+if (shouldSell)
+    strategy.close("Buy")
+
