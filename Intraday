@@ -2,8 +2,8 @@ strategy("Intraday", overlay=true, margin_long=100, margin_short=100)
 dayOpen=open[1]
 dayClose=close[0]
 float gap=dayOpen-dayClose
-if (gap>0)
+if (gap<0)
     strategy.entry("Sell", strategy.long)
 
-if (gap<0)
+if (gap>0)
     strategy.entry("Buy", strategy.short)
