@@ -1,4 +1,6 @@
 //@version=5
+//Nifty 50 Index
+// timeframe: 3 months in one hour interval
 strategy(" Momentum Strategy", overlay=true)
 
 
@@ -22,3 +24,5 @@ if (shouldBuy)
 if (shouldSell)
     strategy.close("Buy")
 
+//net profit= 8152.70 INR
+//max drawdown= 1324.50 INR
