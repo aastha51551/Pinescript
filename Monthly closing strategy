@@ -1,4 +1,6 @@
 //@version=5
+//timeframe: 3 months in one hour interval
+//Nifty 50 Index
 strategy("Monthly Candle Strategy", overlay=true)
 
 
@@ -15,3 +17,5 @@ shortCondition = monthlyClose < previousMonthClose
 strategy.entry("Long", strategy.long, when=longCondition)
 strategy.entry("Short", strategy.short, when=shortCondition)
 
+//net profit=2301.15 INR
+//max drawdown=2023.50 INR
