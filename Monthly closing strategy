@@ -5,8 +5,8 @@ strategy("Monthly Candle Strategy", overlay=true)
 
 
 var float previousMonthClose = na
-monthlyClose = security(syminfo.tickerid, "M", close)
-isNewMonth = change(time("M"))
+monthlyClose = request.security(syminfo.tickerid, "M", close)
+isNewMonth = ta.change(time("M"))
 if isNewMonth
     previousMonthClose := monthlyClose
 
