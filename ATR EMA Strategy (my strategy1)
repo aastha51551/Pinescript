@@ -1,4 +1,6 @@
-/@version=5
+//@version=5
+//Nifty 50 Index
+// time frame: 3 months in 1 hour interval
 strategy("Trend-Following Strategy with Volatility Filter", overlay=true)
 
 atrMultiplier=2.0
@@ -18,3 +20,6 @@ if (exitLong)
 
 
 plot(ema, color=color.blue, title="EMA")
+
+//net profit= 675.95 INR
+//max drawdown= 203.60 INR
