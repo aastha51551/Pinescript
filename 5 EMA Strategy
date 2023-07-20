@@ -1,4 +1,6 @@
 //@version=5
+//Nifty 50 Index
+// time frame: 3 months in one hour interval
 strategy("5 EMA Strategy", overlay=true)
 
 ema = ta.ema(close, 5)
@@ -14,3 +16,6 @@ if (Sell)
 
 // Plot 5 EMA
 plot(ema, color=color.blue, title="5 EMA")
+
+//net profit=10581.90 INR
+//max drawdown= 1663.45 INR
