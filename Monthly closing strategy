@@ -1,0 +1,17 @@
+//@version=5
+strategy("Monthly Candle Strategy", overlay=true)
+
+
+var float previousMonthClose = na
+monthlyClose = security(syminfo.tickerid, "M", close)
+isNewMonth = change(time("M"))
+if isNewMonth
+    previousMonthClose := monthlyClose
+
+
+longCondition = monthlyClose > previousMonthClose
+shortCondition = monthlyClose < previousMonthClose
+
+strategy.entry("Long", strategy.long, when=longCondition)
+strategy.entry("Short", strategy.short, when=shortCondition)
+
