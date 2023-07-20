@@ -1,4 +1,6 @@
 //@version=5
+//5 days in 5 mins time frame
+//Nifty 50 Index
 strategy("Bollinger Band Strategy", overlay=true)
 
 
@@ -26,3 +28,5 @@ if (shouldSell)
 plot(basis, color=color.blue, title="Basis")
 plot(upperBand, color=color.red, title="Upper Band")
 plot(lowerBand, color=color.green, title="Lower Band")
+// Net profit= 1099.30 INR
+//Max drawdown=377.80 INR
