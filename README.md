@@ -24,3 +24,7 @@ Given below are all the indicators , signals and strategies covered as a part of
 ## My Strategies
 * [ATR EMA Strategy](ATR-EMA-Strategy-(mystrategy1))
 * [ Momentum Strategy](Momentum-Strategy(myStrategy2))
+
+***
+
+Click on this [link](https://drive.google.com/drive/folders/18eBCwQRQtvpb5M6bD4HwI6kWvX4nXLf2) to view screenshots of strategies' test.
