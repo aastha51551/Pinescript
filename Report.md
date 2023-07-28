@@ -4,7 +4,7 @@
 
 <p align="center"> Astha Sahu </p>
 
-<p align="center"> Mentored by Vivek kumar and Rajik Kumar </p>
+<p align="center"> Mentored by - Vivek kumar and Rajik Kumar </p>
 
 ## About the Project
 In this project, we learnt developing trading strategies using pine script on TradingView platform. We learnt about various indicators, signals and strategies . We also learnt about importance of time frame. In the end, I was able to develope my own strategy and test them sucessfully on different stocks and index. Given below are some the indicators, signals and strategies that I have tested during this project.
@@ -39,7 +39,7 @@ Click on this [link](Dead-Crossover) to view the code.
 
 In Intraday Strategy , we buy and sell within the same day.Click on this [link](Intraday) to view the code.
 
-### Inside Candle Single
+### Inside Candle Signal
 
 It is a signal. When the opening and closing value of the current candle falls within the range of opening 
 and closing values of the previous candle, it’s called as an inside candle. Click on this [link](Inside-Candle.txt) to view the code.
