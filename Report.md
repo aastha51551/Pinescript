@@ -68,6 +68,6 @@ We exit the long position when closing price crosses below EMA. Click on this [l
 
 ### My Strategy 2 ( Momentum Strategy)
 
-In his strategy we use the comcept of momentum and fast and slow moving averages. Fast moving averages have shorter SMA period as compared to slow moving averages.  Click on this [link](Momentum-Strategy(myStrategy2)) to view the code.
+In this strategy we use the concept of momentum and fast and slow moving averages. Fast moving averages have shorter SMA period as compared to slow moving averages.  Click on this [link](Momentum-Strategy(myStrategy2)) to view the code.
 
 
